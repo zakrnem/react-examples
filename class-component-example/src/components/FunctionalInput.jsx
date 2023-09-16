@@ -7,7 +7,11 @@ const FunctionalInput = ({ name }) => {
     one to store the To-Do's
     and the other to store the value of the input field
   */
-  const [todos, setTodos] = useState(['Just some demo tasks', 'As an example']);
+  const [todos, setTodos] = useState([
+    'Just some demo tasks',
+    'As an example',
+    'More tasks',
+  ]);
   const [inputVal, setInputVal] = useState('');
 
   const handleInputChange = (e) => {
@@ -17,7 +21,7 @@ const FunctionalInput = ({ name }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setTodos((todo) => [...todo, inputVal]);
-    setInputVal('');
+    setInputVal('Test');
   };
 
   return (
@@ -35,7 +39,7 @@ const FunctionalInput = ({ name }) => {
         />
         <button type="submit">Submit</button>
       </form>
-      <h4>All the tasks!</h4>
+      <h4>All the tasks!!!</h4>
       {/* The list of all the To-Do's, displayed */}
       <ul>
         {todos.map((todo) => (
